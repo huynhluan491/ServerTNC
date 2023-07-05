@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "4a527500-4cea-4275-8de7-9e07cbcdc255",
+		"name": "grpsora-tours",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tours",
+			"item": [
+				{
+					"name": "Get all tours Advanced",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours?duration[gte]=5&duration[lt]=8&difficulty=easy&page=1&pageSize=5&sort=duration,-price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							],
+							"query": [
+								{
+									"key": "duration[gte]",
+									"value": "5"
+								},
+								{
+									"key": "duration[lt]",
+									"value": "8"
+								},
+								{
+									"key": "price[lt]",
+									"value": "500",
+									"disabled": true
+								},
+								{
+									"key": "price[eq]",
+									"value": "397",
+									"disabled": true
+								},
+								{
+									"key": "difficulty",
+									"value": "easy"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "duration,-price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tour by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create tour",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"The Snow Adventurer AAAAA\",\n    \"duration\": 4,\n    \"maxGroupSize\": 10,\n    \"difficulty\": \"difficult\",\n    \"ratingsAverage\": 4.5,\n    \"ratingsQuantity\": 13,\n    \"price\": 997,\n    \"summary\": \"Exciting adventure in the snow with snowboarding and skiing\",\n    \"description\": \"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!\",\n    \"imageCover\": \"tour-3-cover.jpg\",\n    \"images\": [\"tour-3-1.jpg\", \"tour-3-2.jpg\", \"tour-3-3.jpg\"],\n    \"startDates\": [\"2022-01-05,10:00\", \"2022-02-12,10:00\", \"2023-01-06,10:00\"]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update tour by id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n    \"name\": \"BBB\",\n    \"rating\": 4.5,\n    \"price\": 1000\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tour by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/tours/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"tours",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": []
+		}
+	]
+}
